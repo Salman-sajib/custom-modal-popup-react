@@ -8,6 +8,10 @@ function ModalTest() {
     setShowModalPopup(!showModalPopup);
   }
 
+  function handleCloseModal() {
+    setShowModalPopup(false);
+  }
+
   return (
     <div className='p-4'>
       <button
@@ -17,7 +21,7 @@ function ModalTest() {
         Open Modal Popup
       </button>
 
-      {showModalPopup && <Modal />}
+      {showModalPopup && <Modal CloseModal={handleCloseModal} />}
     </div>
   );
 }
